@@ -105,7 +105,7 @@ function TestimoniosSection() {
             <div className="estrellas">
               {[...Array(5)].map((_, i) => <FaStar key={i} />)}
             </div>
-            <div>"{t.texto}"</div>
+            <div>&quot;{t.texto}&quot;</div>
             <div className="autor">— {t.nombre}</div>
           </div>
         ))}
