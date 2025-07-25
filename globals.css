@@ -1,0 +1,138 @@
+/* app/globals.css */
+
+html, body {
+  min-height: 100vh;
+  background: #f8fafc;   /* fondo muy claro, como Apple */
+  color: #1a1a1a;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mejor padding responsivo en main */
+main {
+  max-width: 950px;
+  margin: 3rem auto 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(60,60,80,0.08);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0070f3;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+  font-size: 1.08rem;
+}
+
+button, .button {
+  background: #111;
+  color: white;
+  font-size: 1.04rem;
+  border-radius: 8px;
+  border: none;
+  padding: 0.68rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+button:hover, .button:hover {
+  background: #0070f3;
+}
+
+/* ----------- NUEVO: Mejoras para imágenes y tarjetas ----------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----------- NUEVO: Main y cards responsivo ----------- */
+@media (max-width: 900px) {
+  main {
+    max-width: 99vw;
+    margin: 1rem 0 0 0;
+    padding: 1rem;
+    border-radius: 13px;
+  }
+}
+
+/* ----------- MÁS AJUSTES PARA CELULAR ----------- */
+@media (max-width: 700px) {
+  main {
+    padding: 0.35rem;
+    margin: 0.3rem;
+    border-radius: 9px;
+  }
+  nav {
+    font-size: 0.98rem;
+    gap: 0.7rem;
+    padding: 0.4rem 0.5rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.1em;
+    margin-bottom: 0.6rem;
+  }
+  ul, li {
+    font-size: 0.98rem;
+  }
+  button, .button {
+    font-size: 0.98rem;
+    padding: 0.65rem 1.1rem;
+    margin-top: 0.45rem;
+    border-radius: 7px;
+  }
+}
+
+/* ----------- Mejor scroll para móviles ----------- */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+/* ----------- Si usas cards (tarjetas de producto), mete esto global ----------- */
+.card, .producto-card, .product-card {
+  border-radius: 14px;
+  box-shadow: 0 3px 16px #0001;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  transition: box-shadow .16s;
+}
+.card:hover, .producto-card:hover, .product-card:hover {
+  box-shadow: 0 8px 32px #0002;
+}
